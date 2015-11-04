@@ -3,40 +3,42 @@ $(document).ready(function(){
 	 searchArg ="";
     function searchWiki(inString){
 	  var mySearch="";	
-	  var requestURL="/w/api.php?action=query&prop=extracts&format=json&exchars=175&exlimit=10&exintro=&exsectionformat=plain&titles=Main%20Page&generator=search&gsrsearch="
-	   mySearch = requestURL.trim() + mySearch;  
-	   $.getJSON({mySearch,
-				  function(resp){
-		               console.log(resp);
-	               } 
+	  var requestURL="http://en.wikipedia.org/w/api.php?action=query&meta=filerepoinfo&prop=extracts|info&format=json&exsentences=5&exlimit=10&exintro=&inprop=url&friprop=url&titles=Main%20Page&generator=search&gsrsearch="
+       var jsonCallBk="&callback=?";
+        
+	   mySearch = requestURL.trim() + inString.trim() +jsonCallBk;  
+      console.log(mySearch);    
+	   $.getJSON(mySearch,
+				function(resp){
+                 var pagez = resp.query.pages;
+                     for (var i in pagez){
+                         console.log(pagez[i].title);
+                         console.log(pagez[i].extract);
+                         console.log(pagez[i].fullurl);
+                         $("ul").append("<li" + " data-url=" + pagez[i].fullurl + ">" +
+                            "<blockquote>"+pagez[i].title +"<br>" +pagez[i].extract + "</blockquote></li>" );
+                       
+                     }        
+	               
 		   
-	               }
-	   );
-		
-	   	
-  }	
+	   
+                 });
+			   	
+  };	
 
-   // Toggle Search Input
-	$(".input-group").toggle();
-	
-   $("#main-btn").on("click", function(){
-	   if (!inputReady) {
-			$(".input-group").toggle();
-			inputReady=true;
-	   }
-	   else{
-		    $(".input-group").toggle();
-			inputReady=false; 
-	   }
-   } );
-	
-   if ( inputReady ) {
+   // Begin main logic
+      
 	   
-	   $("#srch-btn").on("click",function(){
+   $("#srch-btn").on("click",function(){
 		    searchArg= $("input").val();
-	        searchWiki(searchArg);
-	   })
-	  
-	   
-   }	
+            console.log(searchArg);
+	        searchWiki(searchArg);	
+   });
+   	
+   $("ul").on("click","li",function(){
+      var gotoSite= $(this).data("url");
+       console.log(gotoSite);
+       window.open(gotoSite);
+       
+   });    
 });

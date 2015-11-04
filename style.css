@@ -1,12 +1,23 @@
 .titleclass{
 	background-color: darkgray;
 }
-.srccredit{
-	margin-top: 70%:
-		
+
+
+.input-group{
+   
+    margin-left: 50%;
+    margin-top: 8%;
+  
 }
 
-.main-btn{
-	margin-top:  8%;
-	margin-left: 35%;
+.query-response{
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+        
+    
+}
+
+body{
+    background-image: url("30014771-old-brown-paper-background-vintage-distressed-texture-beige-or-tan-parchment-paper-design-light-gold-Stock-Photo.jpg");
+    background-size:cover;
 }

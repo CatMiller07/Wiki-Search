@@ -1,39 +1,56 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-	 <link rel="stylesheet" href="style.css">	
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+	 <!-- Bootstrap -->
+   
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">	
 	</head>
     <body>
 	 <div class="container">  
 	   <div class="row">
 		    <div class="titleclass">
-		        <h1 class="text-center">Wikipedia Search<br></h1>
+		        <h1 class="text-center">Wikipedia Search</h1>
 		    </div>			    
 	   </div> 
 	</div> 	 
 	    <div class="container-fluid">	
 		   <div class="row">
-			 <div class="main-btn">	
-			    <button type="button" id="main-btn" class="btn btn-default btn-info btn-lg col-lg-4">
-				 <span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Search
-			    </button>
-			 </div>  
-			 <div class="col-lg-4 srch-btn">
+			
+			 <div class="col-lg-8 srch-btn">
 				<div class="input-group">
 				  <span class="input-group-btn">
 					<button id="srch-btn" class="btn btn-default" type="button">Go!</button>
 				  </span>
 				   <input type="text" class="form-control" placeholder="Search for...">
 				</div><!-- /input-group -->	
-		    </div>   
+		    </div> 
+   
+            </div>    
+             <div class="row">   
+               <div class="query-response">
+                <ul>
+                
+                </ul>
+            </div>   
 		   </div>
-		  	   
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">
-   </script>
-		 
+			   
+            <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        	<script src="index.js"></script>	 
 	</body>
 
 </html>	
