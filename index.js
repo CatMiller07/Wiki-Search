@@ -28,7 +28,11 @@ $(document).ready(function(){
 
    // Begin main logic
       
-	   
+   $("#clearBtn").on("click",function(){
+	   alert("here i am");
+	   $("input").val("");
+	   $("#qry-results").html("");
+   })	   
    $("#srch-btn").on("click",function(){
 		    searchArg= $("input").val();
             console.log(searchArg);
