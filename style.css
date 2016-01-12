@@ -2,7 +2,9 @@
 	background-color: darkgray;
 }
 
-
+h1{
+	font-family: 'Source Sans Pro', sans-serif;
+}
 .input-group{
    
     margin-left: 50%;
@@ -20,7 +22,10 @@
 }
 
 body{
-    background-image: url("30014771-old-brown-paper-background-vintage-distressed-texture-beige-or-tan-parchment-paper-design-light-gold-Stock-Photo.jpg");
+    background-image: url("parchment.png");
     background-size:cover;
 }
 
+.glyphicon{
+	top:0;
+}
