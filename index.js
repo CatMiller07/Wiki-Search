@@ -27,7 +27,7 @@ $(document).ready(function(){
 			   	
   };
     function clearOut() {
-	   alert("here i am");
+	   //alert("here i am");
 		
        $("input").val("");
        $("#query-response").empty();

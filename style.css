@@ -1,10 +1,17 @@
 .titleclass{
+	
+    height: 75px;
 	background-color: darkgray;
 }
 
-h1{
-	font-family: 'Source Sans Pro', sans-serif;
+h1::first-letter{
+
+    font-size: 65px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+	
 }
+
 .input-group{
    
     margin-left: 50%;
@@ -22,9 +29,14 @@ h1{
 }
 
 body{
-    background-image: url("parchment.png");
-    background-size:cover;
+	
+  background-image: url("parchment.png");
+	 -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+        background-size: cover;  
 }
+
 
 .glyphicon{
 	top:0;
